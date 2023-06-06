@@ -1,0 +1,51 @@
+h3 {
+    text-align: center;
+    color: gold;
+}
+
+body {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+p {
+    margin-left: 1em;
+    font-size: x-large;
+}
+
+#input-container {
+    padding-top: 1em;
+    width: 100%;
+    background-color: lightgray;
+    padding-bottom: 1.5em;
+    border: 2px solid black;
+    margin-bottom: 2em;
+}
+
+#content-container {
+    width: 100%;
+    border: 2px solid black;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#shape-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#data-container {
+    position: relative;
+    width: 300px;
+    height: 335px;
+    background-color: white;
+    border: 1px solid black;
+}

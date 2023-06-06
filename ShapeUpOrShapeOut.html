@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Up or Shape Out</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="ShapeUpOrShapeOut.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="bg-primary p-3 my-4" id="input-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Rectangle</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="form-group">
+                                <textarea class="form-control" id="rectangleHeight" rows="1"
+                                    placeholder="Height"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="rectangleWidth" rows="1"
+                                    placeholder="Width"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <button type="button" id="rectangle-button" class="btn btn-outline-warning">Draw
+                                Rectangle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Square</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="form-group">
+                                <textarea class="form-control" id="squareSideLength" rows="1"
+                                    placeholder="Side Length"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <button type="button" id="square-button" class="btn btn-outline-warning">Draw
+                                Square</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Circle</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="form-group">
+                                <textarea class="form-control" id="circleRadius" rows="1"
+                                    placeholder="Radius"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <button type="button" id="circle-button" class="btn btn-outline-warning">Draw
+                                Circle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Triangle</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="form-group">
+                                <textarea class="form-control" id="triangleHeight" rows="1"
+                                    placeholder="Height"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <button type="button" id="triangle-button" class="btn btn-outline-warning">Draw
+                                Triangle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="container-fluid bg-dark" id="content-container">
+            <div class="row">
+                <div class="col-md-8 d-flex justify-content-center">
+                    <div id="shape-container">
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div id="data-container">
+                        <h2>Data:</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+
+</html>
