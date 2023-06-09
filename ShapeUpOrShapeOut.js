@@ -13,20 +13,44 @@ let circleRadius = document.getElementById('circleRadius');
 let triangleHeight = document.getElementById('triangleHeight');
 
 
-document.getElementById(rectangleButton).click(() => {
-    
+document.getElementById(rectangleButton)
+rectangleButton.addEventListener("click", function () {
+    if ((rectangleWidth.val() >= 1 && rectangleWidth.val() <= 600) && (rectangleHeight.val() >= 1 && rectangleHeight.val() <= 600)) {
+        let rectangle = new rectangle(rectangleWidth.val(), rectangleHeight.val());
+    }
+    else {
+        alert("You must enter a height and width between 1 and 600.");
+    }
 });
 
-document.getElementById(squareButton).click(() => {
-   
+document.getElementById(squareButton)
+squareButton.addEventListener("click", function () {
+    if (squareSideLength.val() >= 1 && squareSideLength.val() <= 600) {
+        let square = new square(squareSideLength.val());
+    }
+    else {
+        alert("You must enter a side length between 1 and 600.");
+    }
 });
 
-document.getElementById(circleButton).click(() => {
-    
+document.getElementById(circleButton)
+circleButton.addEventListener("click", function() {
+    if (circleRadius.val() >= 1 && circleRadius.val() <= 300) {
+        let circle = new circle(circleRadius.val());
+    }
+    else {
+        alert("You must enter a radius between 1 and 300.");
+    }
 });
 
-document.getElementById(triangleButton).click(() => {
-
+document.getElementById(triangleButton)
+triangleButton.addEventListener("click", function () {
+    if (triangleHeight.val() >= 1 && triangleHeight.val() <= 600) {
+        let triangle = new triangle(triangleHeight.val());
+    }
+    else {
+        alert("You must enter a height between 1 and 600.");
+    }
 });
 
 
@@ -47,7 +71,7 @@ class shape {
     render() {
         this.getRandomCoords();
         document.getElementById('shapeContainer').appendChild(this.div);
-        console.log(this.div)
+        shape.push(this)
     }
     getRandomCoords() {
         this.x = Math.floor(Math.random() * (600 - this.width));
@@ -70,7 +94,7 @@ class square extends shape {
     constructor(height) {
         super(height, height);
         this.name = 'square'
-        this.color = 'red';
+        this.div.style.color = 'red';
     }
 }
 
@@ -78,7 +102,7 @@ class circle extends shape {
     constructor(radius) {
         super(radius*2, radius*2);
         this.name = 'circle'
-        this.color = 'purple';
+        this.div.style.color = 'purple';
         this.radius = radius;
         this.area = Math.PI * (height / 2) ** 2;
     }
@@ -89,7 +113,7 @@ class triangle extends shape {
     constructor(height) {
         super(height, height);
         this.name = 'triangle';
-        this.color = 'yellow';
+        this.div.style.color = 'yellow';
         this.area = (1 / 2) * height * height;
     }
 
