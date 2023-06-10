@@ -15,8 +15,8 @@ let triangleHeight = document.getElementById('triangleHeight');
 
 document.getElementById(rectangleButton)
 rectangleButton.addEventListener("click", function () {
-    if ((rectangleHeight >= 1 && rectangleHeight <= 600) && (rectangleWidth >= 1 && rectangleWidth <= 600)) {
-        let rectangle = new rectangle(rectangleHeight, rectangleWidth);
+    if ((rectangleHeight.value >= 1 && rectangleHeight.value <= 600) && (rectangleWidth.value >= 1 && rectangleWidth.value <= 600)) {
+        let rectangle = new rectangle(rectangleHeight.value, rectangleWidth.value);
     }
     else {
         alert("You must enter a height and width between 1 and 600.");
@@ -25,8 +25,8 @@ rectangleButton.addEventListener("click", function () {
 
 document.getElementById(squareButton)
 squareButton.addEventListener("click", function () {
-    if (squareSideLength >= 1 && squareSideLength <= 600) {
-        let square = new square(squareSideLength);
+    if (squareSideLength.value >= 1 && squareSideLength.value <= 600) {
+        let square = new square(squareSideLength.value);
     }
     else {
         alert("You must enter a side length between 1 and 600.");
@@ -35,8 +35,8 @@ squareButton.addEventListener("click", function () {
 
 document.getElementById(circleButton)
 circleButton.addEventListener("click", function () {
-    if (circleRadius >= 1 && circleRadius <= 300) {
-        let circle = new circle(circleRadius);
+    if (circleRadius.value >= 1 && circleRadius.value <= 300) {
+        let circle = new circle(circleRadius.value);
     }
     else {
         alert("You must enter a radius between 1 and 300.");
@@ -45,8 +45,8 @@ circleButton.addEventListener("click", function () {
 
 document.getElementById(triangleButton)
 triangleButton.addEventListener("click", function () {
-    if (triangleHeight >= 1 && triangleHeight <= 600) {
-        let triangle = new triangle(triangleHeight);
+    if (triangleHeight.value >= 1 && triangleHeight.value <= 600) {
+        let triangle = new triangle(triangleHeight.value);
     }
     else {
         alert("You must enter a height between 1 and 600.");
@@ -74,18 +74,18 @@ class shape {
             this.removeShape()
         });
     }
-    render() {
+    render = function() {
         this.getRandomCoords();
-        document.getElementById('shapeContainer').appendChild(this.div);
+        document.getElementById('shape-container').appendChild(this.div);
     }
-    getRandomCoords() {
+    getRandomCoords = function() {
         this.x = Math.floor(Math.random() * (600 - this.width));
         this.y = Math.floor(Math.random() * (600 - this.height));
     }
-    describe() {
+    describe = function() {
         document.getElementById('p').appendChild(this.data);
     }
-    removeShape() {
+    removeShape = function() {
         document.removeChild(this.div)
     }
 }
